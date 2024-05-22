@@ -18,7 +18,7 @@ lint:
 data:
 	@cd data/raw
 	@kaggle competitions download -c house-prices-advanced-regression-techniques
-	@unzip ./*
+	@unzip *.zip
 	@rm *.zip
 
 # # Create coverage report
