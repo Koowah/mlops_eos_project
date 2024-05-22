@@ -1,0 +1,13 @@
+# Ruff
+[tool.ruff]
+line-length = 110
+# By default, Ruff omits rules that overlap with the use of a formatter, like Black
+
+# Pytest
+[tool.pytest.ini_options]
+# testpaths = ["tests"]
+# python_files = "test_*.py"
+
+# Pytest cov
+[tool.coverage.run]
+# omit=["src/evaluate.py", "src/serve.py"]
