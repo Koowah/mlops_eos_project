@@ -1,5 +1,9 @@
 .ONESHELL: data
-.PHONY: clean data lint coverage test
+.PHONY: clean data lint coverage test mlflow
+
+# MLflow
+mlflow:
+	mlflow server --host $(MLFLOW_HOST) --port ${MLFLOW_PORT} --backend-store-uri $(MLFLOW_TRACKING_URI)
 
 # Cleaning
 clean:
@@ -13,6 +17,7 @@ clean:
 lint:
 	ruff check *.py src
 	ruff format *.py src
+
 
 # Build dataset
 data:
@@ -29,3 +34,9 @@ data:
 # # Test
 # test: 
 # 	ruff check *.py src/*.py
+
+# # Docs
+# docs:
+# 	cd docs && mkdocs build
+# docs-serve:
+# 	cd docs && mkdocs serve

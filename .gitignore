@@ -2,6 +2,8 @@ data/interm/*
 data/processed/*
 data/raw/*
 
+mlflow
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
